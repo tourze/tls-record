@@ -11,6 +11,7 @@
     "tourze/tls-crypto": "0.0.*"
   },
   "require-dev": {
+    "maglnet/composer-require-checker": "^4",
     "phpstan/phpstan": "^2.1",
     "phpunit/phpunit": "^10.0"
   },
