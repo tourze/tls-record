@@ -7,8 +7,7 @@
     "php": "^8.1",
     "ext-hash": "*",
     "ext-sockets": "*",
-    "tourze/tls-common": "0.0.*",
-    "tourze/tls-crypto": "0.0.*"
+    "tourze/tls-common": "0.0.*"
   },
   "require-dev": {
     "maglnet/composer-require-checker": "^4",

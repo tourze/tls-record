@@ -3,8 +3,8 @@
 namespace Tourze\TLSRecord\VersionAdapter;
 
 use Tourze\TLSCommon\Protocol\ContentType;
-use Tourze\TLSCrypto\CryptoFactory;
-use Tourze\TLSCrypto\Exception\CipherException;
+use Tourze\TLSCryptoFactory\CryptoFactory;
+use Tourze\TLSCryptoSymmetric\Exception\CipherException;
 use Tourze\TLSRecord\CipherState;
 use Tourze\TLSRecord\Exception\RecordException;
 use Tourze\TLSRecord\RecordData;
