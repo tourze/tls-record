@@ -119,7 +119,7 @@ class TLS12RecordAdapter implements RecordVersionAdapter
                 // 使用tls-crypto包加密数据
                 return $this->encryptCBC($paddedData, $state);
             }
-        } catch  (\Throwable $e) {
+        } catch (\Throwable $e) {
             throw new RecordException('加密失败: ' . $e->getMessage(), 0, $e);
         }
     }
@@ -178,7 +178,7 @@ class TLS12RecordAdapter implements RecordVersionAdapter
 
                 return [$plaintext, ContentType::APPLICATION_DATA->value];
             }
-        } catch  (\Throwable $e) {
+        } catch (\Throwable $e) {
             throw new RecordException('解密失败: ' . $e->getMessage(), 0, $e);
         }
     }
