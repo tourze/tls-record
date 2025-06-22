@@ -12,9 +12,9 @@ class SocketTransport implements Transport
     /**
      * 套接字资源
      *
-     * @var resource|null
+     * @var \Socket|null
      */
-    private $socket = null;
+    private ?\Socket $socket = null;
     
     /**
      * 是否已连接
@@ -58,10 +58,11 @@ class SocketTransport implements Transport
         }
         
         // 创建TCP套接字
-        $this->socket = @socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
-        if ($this->socket === false) {
+        $socket = @socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
+        if ($socket === false) {
             throw new RecordException('创建套接字失败: ' . socket_strerror(socket_last_error()));
         }
+        $this->socket = $socket;
         
         // 设置超时选项
         socket_set_option($this->socket, SOL_SOCKET, SO_RCVTIMEO, ['sec' => $this->timeout, 'usec' => 0]);

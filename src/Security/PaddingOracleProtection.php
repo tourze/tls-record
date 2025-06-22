@@ -11,7 +11,7 @@ class PaddingOracleProtection
 {
     /**
      * CBC模式下应用分割记录技术来防御BEAST攻击
-     * 
+     *
      * BEAST攻击利用CBC模式的特性，通过使攻击者控制的数据与密文互相影响
      * 分割记录技术将每条记录分割成单字节和剩余字节两部分，减少攻击面
      *
@@ -76,7 +76,7 @@ class PaddingOracleProtection
             
             // 只有当位置是填充位置且值不正确时才设置valid为0
             // 使用按位运算保持时间恒定
-            $valid &= ($isPaddingPosition & $isCorrectValue) | (!$isPaddingPosition);
+            $valid &= ($isPaddingPosition & $isCorrectValue) | (1 - $isPaddingPosition);
         }
         
         return [$valid === 1, $paddingValue + 1];
