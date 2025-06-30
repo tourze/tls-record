@@ -7,7 +7,7 @@ use Tourze\TLSRecord\Transport\SocketTransport;
 
 /**
  * SocketTransport类单元测试
- * 
+ *
  * 注意：由于SocketTransport涉及实际网络连接，这里主要测试类的基本行为，
  * 不进行实际的网络连接测试，避免测试依赖于外部网络环境
  */

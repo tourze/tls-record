@@ -79,7 +79,7 @@ class PaddingOracleProtection
             $valid &= ($isPaddingPosition & $isCorrectValue) | (1 - $isPaddingPosition);
         }
         
-        return [$valid === 1, $paddingValue + 1];
+        return [$valid === 1, $paddingValue];
     }
     
     /**
